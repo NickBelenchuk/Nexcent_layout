@@ -200,17 +200,26 @@
             </defs>
           </svg>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Feature</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Testimonial</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <button class="login-btn">Login</button>
-          <button class="signup-btn">Sign Up</button>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Feature</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -379,7 +388,7 @@
     <section class="unseen-experiance">
       <div class="container unseen-container">
         <div class="unseen-image">
-          <img src="./assets/images/middle_bannder.png" alt="Unseen Image" />
+          <img src="./assets/images/middle_banner.png" alt="Unseen Image" />
         </div>
         <div class="unseen-content">
           <h2>The unseen of spending three years at Pixelgrade</h2>
@@ -391,7 +400,7 @@
             Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
             elementum pulvinar odio.
           </p>
-          <button class="cta-btn">Learn More</button>
+          <button class="cta-btn cta-btn-more">Learn More</button>
         </div>
       </div>
     </section>
@@ -442,7 +451,7 @@
             hendrerit venenatis libero. Donec consectetur faucibus ipsum id
             gravida.
           </p>
-          <button class="cta-btn">Learn More</button>
+          <button class="cta-btn cta-btn-more">Learn More</button>
         </div>
       </div>
     </section>
@@ -777,5 +786,14 @@
         </div>
       </div>
     </footer>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
